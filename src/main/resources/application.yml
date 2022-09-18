@@ -18,6 +18,8 @@ spring:
         compressed: true
         # html-application-cache: true
       static-locations: classpath:/static/
+  main:
+    allow-bean-definition-overriding: true
 
   # thymeleaf 配置
   thymeleaf:
