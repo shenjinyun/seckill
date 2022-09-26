@@ -70,4 +70,22 @@ public class UserController {
     public void mq03() {
         mqSender.send02("hello, green");
     }
+
+    /**
+     * Topic模式
+     */
+    @RequestMapping("/mq/topic01")
+    @ResponseBody
+    public void mq04() {
+        mqSender.send03("hello, red");
+    }
+
+    /**
+     * Topic模式
+     */
+    @RequestMapping("/mq/topic02")
+    @ResponseBody
+    public void mq05() {
+        mqSender.send04("hello, green");
+    }
 }
