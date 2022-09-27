@@ -88,4 +88,22 @@ public class UserController {
     public void mq05() {
         mqSender.send04("hello, green");
     }
+
+    /**
+     * Headers模式
+     */
+    @RequestMapping("/mq/header01")
+    @ResponseBody
+    public void mq06() {
+        mqSender.send05("hello, header01");
+    }
+
+    /**
+     * Headers模式
+     */
+    @RequestMapping("/mq/header02")
+    @ResponseBody
+    public void mq07() {
+        mqSender.send05("hello, header02");
+    }
 }
