@@ -12,7 +12,7 @@ public class RabbitMQConfigTopic {
 
     private static final String QUEUE01 = "queue_topic01";
     private static final String QUEUE02 = "queue_topic02";
-    private static final String EXCHANGE = "topicExChange";
+    private static final String EXCHANGE = "topicExchange";
     private static final String ROUTINGKEY01 = "#.queue.#";
     private static final String ROUTINGKEY02 = "*.queue.#";
 
