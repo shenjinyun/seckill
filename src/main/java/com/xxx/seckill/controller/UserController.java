@@ -104,6 +104,6 @@ public class UserController {
     @RequestMapping("/mq/header02")
     @ResponseBody
     public void mq07() {
-        mqSender.send05("hello, header02");
+        mqSender.send06("hello, header02");
     }
 }

@@ -14,7 +14,7 @@ import java.util.Map;
 public class RabbitMQConfigHeaders {
     private static final String QUEUE01 = "queue_header01";
     private static final String QUEUE02 = "queue_header02";
-    private static final String EXCHANGE = "HeaderExchange";
+    private static final String EXCHANGE = "headersExchange";
 
     @Bean
     public Queue queue01() {
@@ -46,6 +46,6 @@ public class RabbitMQConfigHeaders {
         map.put("color", "red");
         map.put("speed", "fast");
 
-        return BindingBuilder.bind(queue01()).to(headersExchange()).whereAll(map).match();
+        return BindingBuilder.bind(queue02()).to(headersExchange()).whereAll(map).match();
     }
 }
