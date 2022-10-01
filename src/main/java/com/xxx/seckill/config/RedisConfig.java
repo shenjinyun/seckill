@@ -29,23 +29,5 @@ public class RedisConfig {
         redisTemplate.setConnectionFactory(redisConnectionFactory);
         return redisTemplate;
 
-
-//        @Bean
-//        public RedisTemplate<String,Object> redisTemplate(RedisConnectionFactory connectionFactory){
-//            RedisTemplate<String,Object> redisTemplate = new RedisTemplate<>();
-//            //key序列器
-//            redisTemplate.setKeySerializer(new StringRedisSerializer());
-//            //value序列器
-//            redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
-//
-//            //Hash类型 key序列器
-//            redisTemplate.setHashKeySerializer(new StringRedisSerializer());
-//            //Hash类型 value序列器
-//            redisTemplate.setHashValueSerializer(new GenericJackson2JsonRedisSerializer());
-//
-//            // 注入连接工厂
-//            redisTemplate.setConnectionFactory(connectionFactory);
-//            return redisTemplate;
-//        }
     }
 }

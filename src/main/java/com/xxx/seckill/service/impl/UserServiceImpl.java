@@ -87,8 +87,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         if(StringUtils.isEmpty(userTicket)) {
             return null;
         }
+        // 从redis中获取用户
         User user = (User) redisTemplate.opsForValue().get("user:" + userTicket);
         if(user != null) {
+            // 重新设置cookie
             CookieUtil.setCookie(request, response, "userTicket", userTicket);
         }
         return user;

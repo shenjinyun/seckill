@@ -35,22 +35,22 @@ public class UserUtil {
         }
         System.out.println("create user");
         // 插入数据库
-        Connection connection = getConnection();
-        String sql = "insert into t_user(login_count, nickname, register_date, salt, password, id) values(?,?,?,?,?,?)";
-        PreparedStatement pstmt = connection.prepareStatement(sql);
-        for (User user : users) {
-            pstmt.setInt(1, user.getLoginCount());
-            pstmt.setString(2, user.getNickname());
-            pstmt.setTimestamp(3, new Timestamp(user.getRegisterDate().getTime()));
-            pstmt.setString(4, user.getSalt());
-            pstmt.setString(5, user.getPassword());
-            pstmt.setLong(6, user.getId());
-            pstmt.addBatch();
-        }
-        pstmt.executeBatch();
-        pstmt.clearParameters();
-        connection.close();
-        System.out.println("insert to db");
+//        Connection connection = getConnection();
+//        String sql = "insert into t_user(login_count, nickname, register_date, salt, password, id) values(?,?,?,?,?,?)";
+//        PreparedStatement pstmt = connection.prepareStatement(sql);
+//        for (User user : users) {
+//            pstmt.setInt(1, user.getLoginCount());
+//            pstmt.setString(2, user.getNickname());
+//            pstmt.setTimestamp(3, new Timestamp(user.getRegisterDate().getTime()));
+//            pstmt.setString(4, user.getSalt());
+//            pstmt.setString(5, user.getPassword());
+//            pstmt.setLong(6, user.getId());
+//            pstmt.addBatch();
+//        }
+//        pstmt.executeBatch();
+//        pstmt.clearParameters();
+//        connection.close();
+//        System.out.println("insert to db");
         // 登录，生成userTicket
 
         /*

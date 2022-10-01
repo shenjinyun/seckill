@@ -36,7 +36,7 @@ public class SeckillOrderServiceImpl extends ServiceImpl<SeckillOrderMapper, Sec
     @Override
     public Long getResult(User user, Long goodsId) {
         SeckillOrder seckillOrder = seckillOrderMapper.selectOne(new QueryWrapper<SeckillOrder>().eq("user_id",
-                user.getId()).eq("good_id",
+                user.getId()).eq("goods_id",
                 goodsId));
         if(null != seckillOrder) {
             return seckillOrder.getOrderId();

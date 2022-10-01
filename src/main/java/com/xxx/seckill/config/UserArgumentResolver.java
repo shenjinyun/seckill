@@ -15,11 +15,20 @@ import org.thymeleaf.util.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+/**
+ * 自定义用户参数
+ */
 @Component
 public class UserArgumentResolver implements HandlerMethodArgumentResolver {
     @Autowired
     private IUserService userService;
 
+    /**
+     * 符合条件，返回true才执行resolveArgument
+     * @param parameter
+     * @return
+     */
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
         Class<?> clazz = parameter.getParameterType();

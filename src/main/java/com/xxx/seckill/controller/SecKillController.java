@@ -83,8 +83,8 @@ public class SecKillController implements InitializingBean {
     /*
      * 功能描述：秒杀
      * linux优化前QPS 97.8
-     * linux优化后QPS 210.9
-     *
+     * 缓存后QPS 150.9
+     * 优化后QPS 186.5
      */
     @RequestMapping(value = "/doSeckill", method = RequestMethod.POST)
     @ResponseBody
